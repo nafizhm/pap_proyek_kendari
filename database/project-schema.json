@@ -1,0 +1,1504 @@
+{
+    "aktifitas": {
+        "sql": "CREATE TABLE `aktifitas` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `id_user` int unsigned DEFAULT NULL,\n  `aktivitas` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `method` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `ip_address` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `user_agent` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,\n  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  PRIMARY KEY (`id`),\n  KEY `aktifitas_id_user_index` (`id_user`)\n) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "barang": {
+        "sql": "CREATE TABLE `barang` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `sku` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `nama` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `id_satuan` int NOT NULL,\n  `stok_awal` int NOT NULL,\n  `stok_minimal` int NOT NULL DEFAULT '0',\n  `stok` int NOT NULL,\n  `harga_beli` int NOT NULL,\n  `deskripsi` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": [
+            {
+                "id": 1,
+                "sku": null,
+                "nama": "Semen hitam",
+                "id_satuan": 14,
+                "stok_awal": 113,
+                "stok_minimal": 5,
+                "stok": 60,
+                "harga_beli": 3238,
+                "deskripsi": null
+            },
+            {
+                "id": 2,
+                "sku": null,
+                "nama": "Semen putih\/plamir",
+                "id_satuan": 14,
+                "stok_awal": 5,
+                "stok_minimal": 2,
+                "stok": 0,
+                "harga_beli": 135000,
+                "deskripsi": null
+            },
+            {
+                "id": 3,
+                "sku": null,
+                "nama": "semen kornies",
+                "id_satuan": 14,
+                "stok_awal": 22,
+                "stok_minimal": 5,
+                "stok": 17,
+                "harga_beli": 78000,
+                "deskripsi": null
+            },
+            {
+                "id": 4,
+                "sku": null,
+                "nama": "semen kasting",
+                "id_satuan": 14,
+                "stok_awal": 13,
+                "stok_minimal": 3,
+                "stok": 11,
+                "harga_beli": 58000,
+                "deskripsi": null
+            },
+            {
+                "id": 5,
+                "sku": null,
+                "nama": "besi cincin",
+                "id_satuan": 19,
+                "stok_awal": 18,
+                "stok_minimal": 5,
+                "stok": 66,
+                "harga_beli": 18000,
+                "deskripsi": null
+            },
+            {
+                "id": 6,
+                "sku": null,
+                "nama": "besi 10 inch",
+                "id_satuan": 19,
+                "stok_awal": 186,
+                "stok_minimal": 5,
+                "stok": 0,
+                "harga_beli": 55000,
+                "deskripsi": null
+            },
+            {
+                "id": 7,
+                "sku": null,
+                "nama": "seng 2x4",
+                "id_satuan": 20,
+                "stok_awal": 608,
+                "stok_minimal": 5,
+                "stok": 50,
+                "harga_beli": 25000,
+                "deskripsi": null
+            },
+            {
+                "id": 8,
+                "sku": null,
+                "nama": "perabung",
+                "id_satuan": 20,
+                "stok_awal": 63,
+                "stok_minimal": 5,
+                "stok": 15,
+                "harga_beli": 18000,
+                "deskripsi": null
+            },
+            {
+                "id": 9,
+                "sku": null,
+                "nama": "pintu WC",
+                "id_satuan": 1,
+                "stok_awal": 9,
+                "stok_minimal": 2,
+                "stok": 6,
+                "harga_beli": 230000,
+                "deskripsi": null
+            },
+            {
+                "id": 10,
+                "sku": null,
+                "nama": "closet",
+                "id_satuan": 1,
+                "stok_awal": 0,
+                "stok_minimal": 3,
+                "stok": 3,
+                "harga_beli": 13000,
+                "deskripsi": null
+            },
+            {
+                "id": 11,
+                "sku": null,
+                "nama": "lisplank",
+                "id_satuan": 20,
+                "stok_awal": 76,
+                "stok_minimal": 5,
+                "stok": 80,
+                "harga_beli": 38000,
+                "deskripsi": null
+            },
+            {
+                "id": 12,
+                "sku": null,
+                "nama": "reng baja",
+                "id_satuan": 19,
+                "stok_awal": 165,
+                "stok_minimal": 5,
+                "stok": 0,
+                "harga_beli": 28500,
+                "deskripsi": null
+            },
+            {
+                "id": 13,
+                "sku": null,
+                "nama": "kanal baja",
+                "id_satuan": 19,
+                "stok_awal": 45,
+                "stok_minimal": 5,
+                "stok": 16,
+                "harga_beli": 5351,
+                "deskripsi": null
+            },
+            {
+                "id": 14,
+                "sku": null,
+                "nama": "holow",
+                "id_satuan": 19,
+                "stok_awal": 4,
+                "stok_minimal": 5,
+                "stok": 173,
+                "harga_beli": 0,
+                "deskripsi": null
+            },
+            {
+                "id": 15,
+                "sku": null,
+                "nama": "pipa listrik",
+                "id_satuan": 19,
+                "stok_awal": 85,
+                "stok_minimal": 5,
+                "stok": 62,
+                "harga_beli": 7000,
+                "deskripsi": null
+            },
+            {
+                "id": 16,
+                "sku": null,
+                "nama": "pipa 4 inch",
+                "id_satuan": 19,
+                "stok_awal": 2,
+                "stok_minimal": 0,
+                "stok": 1,
+                "harga_beli": 0,
+                "deskripsi": null
+            },
+            {
+                "id": 17,
+                "sku": null,
+                "nama": "pipa 3 inch",
+                "id_satuan": 19,
+                "stok_awal": 11,
+                "stok_minimal": 4,
+                "stok": 0,
+                "harga_beli": 15556,
+                "deskripsi": null
+            },
+            {
+                "id": 18,
+                "sku": null,
+                "nama": "pipa 1\u00bd inc",
+                "id_satuan": 19,
+                "stok_awal": 13,
+                "stok_minimal": 4,
+                "stok": 7,
+                "harga_beli": 48000,
+                "deskripsi": null
+            },
+            {
+                "id": 19,
+                "sku": null,
+                "nama": "pipa \u00bdinc",
+                "id_satuan": 19,
+                "stok_awal": 82,
+                "stok_minimal": 5,
+                "stok": 62,
+                "harga_beli": 16000,
+                "deskripsi": null
+            },
+            {
+                "id": 20,
+                "sku": null,
+                "nama": "cat tembok",
+                "id_satuan": 21,
+                "stok_awal": 4,
+                "stok_minimal": 2,
+                "stok": 6,
+                "harga_beli": 230000,
+                "deskripsi": null
+            },
+            {
+                "id": 21,
+                "sku": null,
+                "nama": "gypsum",
+                "id_satuan": 20,
+                "stok_awal": 14,
+                "stok_minimal": 5,
+                "stok": 3,
+                "harga_beli": 66000,
+                "deskripsi": null
+            },
+            {
+                "id": 22,
+                "sku": null,
+                "nama": "keramik lantai utama",
+                "id_satuan": 22,
+                "stok_awal": 0,
+                "stok_minimal": 5,
+                "stok": 169,
+                "harga_beli": 61000,
+                "deskripsi": null
+            },
+            {
+                "id": 23,
+                "sku": null,
+                "nama": "keramik teras",
+                "id_satuan": 22,
+                "stok_awal": 1,
+                "stok_minimal": 4,
+                "stok": 38,
+                "harga_beli": 70951,
+                "deskripsi": null
+            },
+            {
+                "id": 24,
+                "sku": null,
+                "nama": "keramik lantai WC",
+                "id_satuan": 22,
+                "stok_awal": 0,
+                "stok_minimal": 8,
+                "stok": 18,
+                "harga_beli": 71000,
+                "deskripsi": null
+            },
+            {
+                "id": 25,
+                "sku": null,
+                "nama": "keramik dinding WC",
+                "id_satuan": 22,
+                "stok_awal": 0,
+                "stok_minimal": 5,
+                "stok": 93,
+                "harga_beli": 70000,
+                "deskripsi": null
+            },
+            {
+                "id": 26,
+                "sku": null,
+                "nama": "listmolding",
+                "id_satuan": 19,
+                "stok_awal": 83,
+                "stok_minimal": 5,
+                "stok": 18,
+                "harga_beli": 9000,
+                "deskripsi": null
+            },
+            {
+                "id": 27,
+                "sku": null,
+                "nama": "Lbow \u00bdinc",
+                "id_satuan": 1,
+                "stok_awal": 47,
+                "stok_minimal": 5,
+                "stok": 40,
+                "harga_beli": 3000,
+                "deskripsi": null
+            },
+            {
+                "id": 28,
+                "sku": null,
+                "nama": "Lbow 1\u00bdinc",
+                "id_satuan": 1,
+                "stok_awal": 30,
+                "stok_minimal": 5,
+                "stok": 24,
+                "harga_beli": 6000,
+                "deskripsi": null
+            },
+            {
+                "id": 29,
+                "sku": null,
+                "nama": "Sockdrat \u00bdinc",
+                "id_satuan": 1,
+                "stok_awal": 18,
+                "stok_minimal": 5,
+                "stok": 16,
+                "harga_beli": 4000,
+                "deskripsi": null
+            },
+            {
+                "id": 30,
+                "sku": null,
+                "nama": "Ldrat \u00bdinc",
+                "id_satuan": 1,
+                "stok_awal": 32,
+                "stok_minimal": 5,
+                "stok": 30,
+                "harga_beli": 4000,
+                "deskripsi": null
+            },
+            {
+                "id": 31,
+                "sku": null,
+                "nama": "Tee \u00bdinc",
+                "id_satuan": 1,
+                "stok_awal": 82,
+                "stok_minimal": 5,
+                "stok": 80,
+                "harga_beli": 5000,
+                "deskripsi": null
+            },
+            {
+                "id": 32,
+                "sku": null,
+                "nama": "Tutup Dop 4inc",
+                "id_satuan": 1,
+                "stok_awal": 4,
+                "stok_minimal": 5,
+                "stok": 3,
+                "harga_beli": 3500,
+                "deskripsi": null
+            },
+            {
+                "id": 33,
+                "sku": null,
+                "nama": "Lbow 3inc",
+                "id_satuan": 1,
+                "stok_awal": 6,
+                "stok_minimal": 5,
+                "stok": 0,
+                "harga_beli": 12000,
+                "deskripsi": null
+            },
+            {
+                "id": 34,
+                "sku": null,
+                "nama": "Lbow 4inc",
+                "id_satuan": 1,
+                "stok_awal": 15,
+                "stok_minimal": 5,
+                "stok": 6,
+                "harga_beli": 22000,
+                "deskripsi": null
+            },
+            {
+                "id": 35,
+                "sku": null,
+                "nama": "Tee 3inc",
+                "id_satuan": 1,
+                "stok_awal": 14,
+                "stok_minimal": 5,
+                "stok": 9,
+                "harga_beli": 25000,
+                "deskripsi": null
+            },
+            {
+                "id": 36,
+                "sku": null,
+                "nama": "Kassa plafon",
+                "id_satuan": 1,
+                "stok_awal": 19,
+                "stok_minimal": 5,
+                "stok": 12,
+                "harga_beli": 8900,
+                "deskripsi": null
+            },
+            {
+                "id": 37,
+                "sku": null,
+                "nama": "Keran leher angsa",
+                "id_satuan": 1,
+                "stok_awal": 11,
+                "stok_minimal": 5,
+                "stok": 9,
+                "harga_beli": 16550,
+                "deskripsi": null
+            },
+            {
+                "id": 38,
+                "sku": null,
+                "nama": "Floor drain",
+                "id_satuan": 1,
+                "stok_awal": 18,
+                "stok_minimal": 5,
+                "stok": 10,
+                "harga_beli": 7500,
+                "deskripsi": null
+            },
+            {
+                "id": 39,
+                "sku": null,
+                "nama": "Sekrup hitam 1\u00bdinc",
+                "id_satuan": 23,
+                "stok_awal": 16,
+                "stok_minimal": 5,
+                "stok": 0,
+                "harga_beli": 35000,
+                "deskripsi": null
+            },
+            {
+                "id": 40,
+                "sku": null,
+                "nama": "Paku beton 1\u00bdinc",
+                "id_satuan": 23,
+                "stok_awal": 3,
+                "stok_minimal": 5,
+                "stok": 0,
+                "harga_beli": 15000,
+                "deskripsi": null
+            },
+            {
+                "id": 41,
+                "sku": null,
+                "nama": "Natt putih",
+                "id_satuan": 24,
+                "stok_awal": 1,
+                "stok_minimal": 4,
+                "stok": 4,
+                "harga_beli": 20000,
+                "deskripsi": null
+            },
+            {
+                "id": 42,
+                "sku": null,
+                "nama": "Lem Fox",
+                "id_satuan": 24,
+                "stok_awal": 1,
+                "stok_minimal": 3,
+                "stok": 2,
+                "harga_beli": 26000,
+                "deskripsi": null
+            },
+            {
+                "id": 43,
+                "sku": null,
+                "nama": "Selang elastis",
+                "id_satuan": 1,
+                "stok_awal": 1,
+                "stok_minimal": 6,
+                "stok": 23,
+                "harga_beli": 16000,
+                "deskripsi": null
+            },
+            {
+                "id": 44,
+                "sku": null,
+                "nama": "Clear bata tempel",
+                "id_satuan": 15,
+                "stok_awal": 1,
+                "stok_minimal": 3,
+                "stok": 2,
+                "harga_beli": 88000,
+                "deskripsi": null
+            },
+            {
+                "id": 45,
+                "sku": null,
+                "nama": "Cat minyak hitam",
+                "id_satuan": 15,
+                "stok_awal": 1,
+                "stok_minimal": 5,
+                "stok": 4,
+                "harga_beli": 68000,
+                "deskripsi": null
+            },
+            {
+                "id": 46,
+                "sku": null,
+                "nama": "Hak angin",
+                "id_satuan": 1,
+                "stok_awal": 29,
+                "stok_minimal": 5,
+                "stok": 45,
+                "harga_beli": 2941,
+                "deskripsi": null
+            },
+            {
+                "id": 47,
+                "sku": null,
+                "nama": "Engsel 3inc",
+                "id_satuan": 1,
+                "stok_awal": 0,
+                "stok_minimal": 5,
+                "stok": 12,
+                "harga_beli": 3125,
+                "deskripsi": null
+            },
+            {
+                "id": 48,
+                "sku": null,
+                "nama": "Engsel 4inc",
+                "id_satuan": 1,
+                "stok_awal": 0,
+                "stok_minimal": 5,
+                "stok": 12,
+                "harga_beli": 3666,
+                "deskripsi": null
+            },
+            {
+                "id": 49,
+                "sku": null,
+                "nama": "Grendel 2inc",
+                "id_satuan": 1,
+                "stok_awal": 72,
+                "stok_minimal": 5,
+                "stok": 72,
+                "harga_beli": 6731,
+                "deskripsi": null
+            },
+            {
+                "id": 50,
+                "sku": null,
+                "nama": "Sink\/Bak cuci piring",
+                "id_satuan": 13,
+                "stok_awal": 0,
+                "stok_minimal": 3,
+                "stok": 1,
+                "harga_beli": 110000,
+                "deskripsi": null
+            },
+            {
+                "id": 51,
+                "sku": null,
+                "nama": "Handle pintu besar\/Utama",
+                "id_satuan": 2,
+                "stok_awal": 9,
+                "stok_minimal": 5,
+                "stok": 21,
+                "harga_beli": 75000,
+                "deskripsi": null
+            },
+            {
+                "id": 52,
+                "sku": null,
+                "nama": "Handle pintu kecil",
+                "id_satuan": 2,
+                "stok_awal": 0,
+                "stok_minimal": 5,
+                "stok": 30,
+                "harga_beli": 58000,
+                "deskripsi": null
+            },
+            {
+                "id": 53,
+                "sku": null,
+                "nama": "Teedus",
+                "id_satuan": 1,
+                "stok_awal": 17,
+                "stok_minimal": 5,
+                "stok": 254,
+                "harga_beli": 1144,
+                "deskripsi": null
+            },
+            {
+                "id": 54,
+                "sku": null,
+                "nama": "Mangkok listrik",
+                "id_satuan": 1,
+                "stok_awal": 77,
+                "stok_minimal": 5,
+                "stok": 47,
+                "harga_beli": 12900,
+                "deskripsi": null
+            },
+            {
+                "id": 55,
+                "sku": null,
+                "nama": "Box MCB",
+                "id_satuan": 23,
+                "stok_awal": 2,
+                "stok_minimal": 5,
+                "stok": 24,
+                "harga_beli": 2200,
+                "deskripsi": null
+            },
+            {
+                "id": 56,
+                "sku": null,
+                "nama": "MCB",
+                "id_satuan": 1,
+                "stok_awal": 10,
+                "stok_minimal": 5,
+                "stok": 4,
+                "harga_beli": 5500,
+                "deskripsi": null
+            },
+            {
+                "id": 57,
+                "sku": null,
+                "nama": "Fitting lampu gantung",
+                "id_satuan": 1,
+                "stok_awal": 15,
+                "stok_minimal": 5,
+                "stok": 12,
+                "harga_beli": 3350,
+                "deskripsi": null
+            },
+            {
+                "id": 58,
+                "sku": null,
+                "nama": "Fitting lampu plafon",
+                "id_satuan": 1,
+                "stok_awal": 1,
+                "stok_minimal": 5,
+                "stok": 66,
+                "harga_beli": 1973,
+                "deskripsi": null
+            },
+            {
+                "id": 59,
+                "sku": null,
+                "nama": "Sakelar stop kontak",
+                "id_satuan": 1,
+                "stok_awal": 27,
+                "stok_minimal": 10,
+                "stok": 23,
+                "harga_beli": 83300,
+                "deskripsi": null
+            },
+            {
+                "id": 60,
+                "sku": null,
+                "nama": "Sakelar engkel\/tunggal",
+                "id_satuan": 1,
+                "stok_awal": 11,
+                "stok_minimal": 5,
+                "stok": 44,
+                "harga_beli": 15509,
+                "deskripsi": null
+            },
+            {
+                "id": 61,
+                "sku": null,
+                "nama": "Sakelar seri",
+                "id_satuan": 1,
+                "stok_awal": 21,
+                "stok_minimal": 5,
+                "stok": 18,
+                "harga_beli": 76700,
+                "deskripsi": null
+            },
+            {
+                "id": 62,
+                "sku": null,
+                "nama": "Isolasi listrik",
+                "id_satuan": 1,
+                "stok_awal": 10,
+                "stok_minimal": 5,
+                "stok": 10,
+                "harga_beli": 5500,
+                "deskripsi": null
+            },
+            {
+                "id": 63,
+                "sku": null,
+                "nama": "Lampu gapura",
+                "id_satuan": 23,
+                "stok_awal": 3,
+                "stok_minimal": 5,
+                "stok": 26,
+                "harga_beli": 68621,
+                "deskripsi": null
+            },
+            {
+                "id": 64,
+                "sku": null,
+                "nama": "Kabel NYA 1,5mm",
+                "id_satuan": 25,
+                "stok_awal": 0,
+                "stok_minimal": 2,
+                "stok": 20,
+                "harga_beli": 180000,
+                "deskripsi": null
+            },
+            {
+                "id": 65,
+                "sku": null,
+                "nama": "Seng 7kaki",
+                "id_satuan": 20,
+                "stok_awal": 26,
+                "stok_minimal": 5,
+                "stok": 19,
+                "harga_beli": 44000,
+                "deskripsi": null
+            },
+            {
+                "id": 66,
+                "sku": null,
+                "nama": "Benang",
+                "id_satuan": 26,
+                "stok_awal": 0,
+                "stok_minimal": 5,
+                "stok": 1,
+                "harga_beli": 6000,
+                "deskripsi": null
+            },
+            {
+                "id": 67,
+                "sku": null,
+                "nama": "Besi 8 ksty",
+                "id_satuan": 19,
+                "stok_awal": 0,
+                "stok_minimal": 5,
+                "stok": 0,
+                "harga_beli": 55000,
+                "deskripsi": null
+            },
+            {
+                "id": 68,
+                "sku": null,
+                "nama": "Papan 2x20x4",
+                "id_satuan": 20,
+                "stok_awal": 53,
+                "stok_minimal": 0,
+                "stok": 0,
+                "harga_beli": 32000,
+                "deskripsi": null
+            },
+            {
+                "id": 69,
+                "sku": null,
+                "nama": "Granit hitam 60x60",
+                "id_satuan": 22,
+                "stok_awal": 0,
+                "stok_minimal": 5,
+                "stok": 7,
+                "harga_beli": 190000,
+                "deskripsi": null
+            },
+            {
+                "id": 70,
+                "sku": null,
+                "nama": "Keran air biasa",
+                "id_satuan": 1,
+                "stok_awal": 0,
+                "stok_minimal": 5,
+                "stok": 34,
+                "harga_beli": 7500,
+                "deskripsi": null
+            },
+            {
+                "id": 71,
+                "sku": null,
+                "nama": "No Drop",
+                "id_satuan": 15,
+                "stok_awal": 0,
+                "stok_minimal": 1,
+                "stok": 1,
+                "harga_beli": 82000,
+                "deskripsi": null
+            },
+            {
+                "id": 72,
+                "sku": null,
+                "nama": "Alkali",
+                "id_satuan": 15,
+                "stok_awal": 0,
+                "stok_minimal": 1,
+                "stok": 0,
+                "harga_beli": 175000,
+                "deskripsi": null
+            },
+            {
+                "id": 73,
+                "sku": null,
+                "nama": "Dempul kayu",
+                "id_satuan": 15,
+                "stok_awal": 0,
+                "stok_minimal": 1,
+                "stok": 1,
+                "harga_beli": 30000,
+                "deskripsi": null
+            },
+            {
+                "id": 74,
+                "sku": null,
+                "nama": "Tutup Dop 3inc",
+                "id_satuan": 1,
+                "stok_awal": 0,
+                "stok_minimal": 1,
+                "stok": 0,
+                "harga_beli": 10000,
+                "deskripsi": null
+            },
+            {
+                "id": 75,
+                "sku": null,
+                "nama": "Granit brown 60x60",
+                "id_satuan": 22,
+                "stok_awal": 0,
+                "stok_minimal": 0,
+                "stok": 0,
+                "harga_beli": 220000,
+                "deskripsi": null
+            },
+            {
+                "id": 76,
+                "sku": null,
+                "nama": "Ampelas tempel P80",
+                "id_satuan": 28,
+                "stok_awal": 0,
+                "stok_minimal": 20,
+                "stok": 0,
+                "harga_beli": 1666,
+                "deskripsi": null
+            },
+            {
+                "id": 77,
+                "sku": null,
+                "nama": "Grendel 4inc",
+                "id_satuan": 1,
+                "stok_awal": 0,
+                "stok_minimal": 5,
+                "stok": 2,
+                "harga_beli": 8000,
+                "deskripsi": null
+            }
+        ]
+    },
+    "barang_keluar": {
+        "sql": "CREATE TABLE `barang_keluar` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `tanggal` date NOT NULL,\n  `id_project` int DEFAULT NULL,\n  `id_lokasi` int DEFAULT NULL,\n  `id_kavling` int DEFAULT NULL,\n  `id_tukang` bigint unsigned DEFAULT NULL,\n  `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `lampiran` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "barang_keluar_detail": {
+        "sql": "CREATE TABLE `barang_keluar_detail` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `id_barang_keluar` int NOT NULL,\n  `id_barang` int NOT NULL,\n  `id_master_project_pekerjaan` bigint unsigned DEFAULT NULL,\n  `jumlah` int NOT NULL,\n  `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,\n  PRIMARY KEY (`id`),\n  KEY `barang_keluar_detail_pekerjaan_idx` (`id_master_project_pekerjaan`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "barang_masuk": {
+        "sql": "CREATE TABLE `barang_masuk` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `tanggal` date NOT NULL,\n  `id_supplier` int DEFAULT NULL,\n  `id_po` int DEFAULT NULL,\n  `nama_penerima` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `total_harga` bigint unsigned NOT NULL DEFAULT '0',\n  `jum_item` int unsigned NOT NULL DEFAULT '0',\n  `terbayar` bigint unsigned NOT NULL DEFAULT '0',\n  `status` tinyint unsigned NOT NULL DEFAULT '0',\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "barang_masuk_detail": {
+        "sql": "CREATE TABLE `barang_masuk_detail` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `id_masuk` int NOT NULL,\n  `id_barang` int NOT NULL,\n  `jumlah` int NOT NULL,\n  `harga_beli` int NOT NULL,\n  `sub_total` int NOT NULL,\n  `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "barang_masuk_lampiran": {
+        "sql": "CREATE TABLE `barang_masuk_lampiran` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `id_barang_masuk` bigint unsigned NOT NULL,\n  `file_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `file_original_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `file_extension` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "barang_masuk_pembayaran": {
+        "sql": "CREATE TABLE `barang_masuk_pembayaran` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `id_barang_masuk` bigint unsigned NOT NULL,\n  `tanggal_pembayaran` date NOT NULL,\n  `jumlah_bayar` bigint unsigned NOT NULL,\n  `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,\n  `bukti_bayar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `bukti_bayar_original_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `bukti_bayar_extension` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "hak_akses_proyek": {
+        "sql": "CREATE TABLE `hak_akses_proyek` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `id_user` int NOT NULL,\n  `id_menu` int NOT NULL,\n  `lihat` tinyint(1) NOT NULL DEFAULT '0',\n  `tambah` tinyint(1) NOT NULL DEFAULT '0',\n  `edit` tinyint(1) NOT NULL DEFAULT '0',\n  `hapus` tinyint(1) NOT NULL DEFAULT '0',\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB AUTO_INCREMENT=778 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "history_barang": {
+        "sql": "CREATE TABLE `history_barang` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `tanggal` date DEFAULT NULL,\n  `id_barang` bigint unsigned NOT NULL,\n  `id_barang_masuk` bigint unsigned DEFAULT NULL,\n  `id_barang_keluar` bigint unsigned DEFAULT NULL,\n  `id_mutasi_stok` bigint unsigned DEFAULT NULL,\n  `tipe` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `masuk` int NOT NULL DEFAULT '0',\n  `keluar` int NOT NULL DEFAULT '0',\n  `stok` int NOT NULL DEFAULT '0',\n  PRIMARY KEY (`id`),\n  KEY `history_barang_id_barang_index` (`id_barang`),\n  KEY `history_barang_id_barang_masuk_index` (`id_barang_masuk`),\n  KEY `history_barang_id_barang_keluar_index` (`id_barang_keluar`),\n  KEY `history_barang_id_mutasi_stok_index` (`id_mutasi_stok`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "jasa_custom": {
+        "sql": "CREATE TABLE `jasa_custom` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `id_setting_proyek` bigint unsigned NOT NULL,\n  `nama_jasa` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `satuan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `harga_satuan` bigint unsigned NOT NULL DEFAULT '0',\n  `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,\n  `created_at` timestamp NULL DEFAULT NULL,\n  `updated_at` timestamp NULL DEFAULT NULL,\n  PRIMARY KEY (`id`),\n  KEY `jasa_custom_id_setting_proyek_index` (`id_setting_proyek`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "level_user": {
+        "sql": "CREATE TABLE `level_user` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `level_user` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": [
+            {
+                "id": 1,
+                "level_user": "Marketing"
+            },
+            {
+                "id": 2,
+                "level_user": "Admin"
+            },
+            {
+                "id": 3,
+                "level_user": "Manager"
+            },
+            {
+                "id": 4,
+                "level_user": "Super Admin"
+            }
+        ]
+    },
+    "log_harga_barang": {
+        "sql": "CREATE TABLE `log_harga_barang` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `id_barang` int unsigned NOT NULL,\n  `id_barang_masuk` int unsigned DEFAULT NULL,\n  `id_user` int unsigned DEFAULT NULL,\n  `proses` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `stok_sebelum` int NOT NULL DEFAULT '0',\n  `harga_sebelum` int NOT NULL DEFAULT '0',\n  `qty_lama` int DEFAULT NULL,\n  `harga_lama` int DEFAULT NULL,\n  `qty_baru` int DEFAULT NULL,\n  `harga_baru_input` int DEFAULT NULL,\n  `stok_sesudah` int NOT NULL DEFAULT '0',\n  `harga_sesudah` int NOT NULL DEFAULT '0',\n  `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  PRIMARY KEY (`id`),\n  KEY `log_harga_barang_id_barang_index` (`id_barang`),\n  KEY `log_harga_barang_id_barang_masuk_index` (`id_barang_masuk`),\n  KEY `log_harga_barang_id_user_index` (`id_user`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "master_project": {
+        "sql": "CREATE TABLE `master_project` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `jenis_proyek` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `jenis_pekerjaan` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "master_project_detail": {
+        "sql": "CREATE TABLE `master_project_detail` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `id_master_project` bigint unsigned NOT NULL,\n  `id_master_project_pekerjaan` bigint unsigned DEFAULT NULL,\n  `tipe` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `id_barang` bigint unsigned DEFAULT NULL,\n  `nama_item` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `satuan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `qty` decimal(18,2) NOT NULL DEFAULT '0.00',\n  `harga_satuan` bigint unsigned NOT NULL DEFAULT '0',\n  `sub_total` bigint unsigned NOT NULL DEFAULT '0',\n  PRIMARY KEY (`id`),\n  KEY `master_project_detail_pekerjaan_idx` (`id_master_project_pekerjaan`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "master_project_pekerjaan": {
+        "sql": "CREATE TABLE `master_project_pekerjaan` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `id_master_project` bigint unsigned NOT NULL,\n  `nama_pekerjaan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "menu_proyek": {
+        "sql": "CREATE TABLE `menu_proyek` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `id_parent` int NOT NULL DEFAULT '0',\n  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `icon` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `jenis_menu` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `urutan` int NOT NULL,\n  `lihat` tinyint(1) NOT NULL DEFAULT '1',\n  `tambah` tinyint(1) NOT NULL DEFAULT '0',\n  `edit` tinyint(1) NOT NULL DEFAULT '0',\n  `hapus` tinyint(1) NOT NULL DEFAULT '0',\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": [
+            {
+                "id": 1,
+                "id_parent": 0,
+                "title": "Dashboard",
+                "url": "dashboard",
+                "icon": "fas fa-tachometer-alt",
+                "jenis_menu": "Internal",
+                "urutan": 1,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 16,
+                "id_parent": 0,
+                "title": "Pengaturan",
+                "url": "#",
+                "icon": "fas fa-cogs",
+                "jenis_menu": "Internal",
+                "urutan": 11,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 17,
+                "id_parent": 16,
+                "title": "Pengguna",
+                "url": "pengguna.index",
+                "icon": "far fa-circle",
+                "jenis_menu": "Internal",
+                "urutan": 1,
+                "lihat": 1,
+                "tambah": 1,
+                "edit": 1,
+                "hapus": 1
+            },
+            {
+                "id": 18,
+                "id_parent": 16,
+                "title": "Hak Akses",
+                "url": "hak-akses.index",
+                "icon": "far fa-circle",
+                "jenis_menu": "Internal",
+                "urutan": 2,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 1,
+                "hapus": 0
+            },
+            {
+                "id": 20,
+                "id_parent": 35,
+                "title": "Barang",
+                "url": "barang.index",
+                "icon": "fa-box-open",
+                "jenis_menu": "Internal",
+                "urutan": 3,
+                "lihat": 1,
+                "tambah": 1,
+                "edit": 1,
+                "hapus": 1
+            },
+            {
+                "id": 22,
+                "id_parent": 35,
+                "title": "Supplier",
+                "url": "supplier.index",
+                "icon": "fa-truck",
+                "jenis_menu": "Internal",
+                "urutan": 1,
+                "lihat": 1,
+                "tambah": 1,
+                "edit": 1,
+                "hapus": 1
+            },
+            {
+                "id": 23,
+                "id_parent": 35,
+                "title": "Satuan",
+                "url": "satuan.index",
+                "icon": "fa-ruler-combined",
+                "jenis_menu": "Internal",
+                "urutan": 2,
+                "lihat": 1,
+                "tambah": 1,
+                "edit": 1,
+                "hapus": 1
+            },
+            {
+                "id": 27,
+                "id_parent": 0,
+                "title": "Barang Masuk",
+                "url": "barang-masuk.index",
+                "icon": "far fa-circle",
+                "jenis_menu": "Internal",
+                "urutan": 3,
+                "lihat": 1,
+                "tambah": 1,
+                "edit": 1,
+                "hapus": 1
+            },
+            {
+                "id": 28,
+                "id_parent": 0,
+                "title": "Barang Keluar",
+                "url": "barang-keluar.index",
+                "icon": "fas fa-box-open",
+                "jenis_menu": "Internal",
+                "urutan": 4,
+                "lihat": 1,
+                "tambah": 1,
+                "edit": 1,
+                "hapus": 1
+            },
+            {
+                "id": 32,
+                "id_parent": 0,
+                "title": "Unit Ready",
+                "url": "#",
+                "icon": "fas fa-house-user",
+                "jenis_menu": "Internal",
+                "urutan": 2,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 33,
+                "id_parent": 0,
+                "title": "Siteplan",
+                "url": "siteplan.index",
+                "icon": "fa-map",
+                "jenis_menu": "Internal",
+                "urutan": 2,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 35,
+                "id_parent": 0,
+                "title": "Gudang",
+                "url": "#",
+                "icon": "fa-warehouse",
+                "jenis_menu": "Internal",
+                "urutan": 10,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 36,
+                "id_parent": 16,
+                "title": "Tukang",
+                "url": "tukang.index",
+                "icon": "fa-hard-hat",
+                "jenis_menu": "Internal",
+                "urutan": 3,
+                "lihat": 1,
+                "tambah": 1,
+                "edit": 1,
+                "hapus": 1
+            },
+            {
+                "id": 37,
+                "id_parent": 16,
+                "title": "Master Project",
+                "url": "master-project.index",
+                "icon": "fa-project-diagram",
+                "jenis_menu": "Internal",
+                "urutan": 4,
+                "lihat": 1,
+                "tambah": 1,
+                "edit": 1,
+                "hapus": 1
+            },
+            {
+                "id": 38,
+                "id_parent": 16,
+                "title": "Setting Proyek",
+                "url": "setting-proyek.index",
+                "icon": "fa-cogs",
+                "jenis_menu": "Internal",
+                "urutan": 5,
+                "lihat": 1,
+                "tambah": 1,
+                "edit": 1,
+                "hapus": 1
+            },
+            {
+                "id": 39,
+                "id_parent": 0,
+                "title": "Monitoring Pembangunan",
+                "url": "monitoring-pembangunan.index",
+                "icon": "fa-clipboard-list",
+                "jenis_menu": "Internal",
+                "urutan": 6,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 40,
+                "id_parent": 0,
+                "title": "Pengajuan Barang",
+                "url": "pengajuan-barang.index",
+                "icon": "fa-file-signature",
+                "jenis_menu": "Internal",
+                "urutan": 5,
+                "lihat": 1,
+                "tambah": 1,
+                "edit": 1,
+                "hapus": 1
+            },
+            {
+                "id": 41,
+                "id_parent": 0,
+                "title": "Monitoring Jasa",
+                "url": "pembayaran-jasa.index",
+                "icon": "fa-hand-holding-usd",
+                "jenis_menu": "Internal",
+                "urutan": 7,
+                "lihat": 1,
+                "tambah": 1,
+                "edit": 1,
+                "hapus": 1
+            },
+            {
+                "id": 42,
+                "id_parent": 16,
+                "title": "Aktifitas",
+                "url": "aktifitas.index",
+                "icon": "fa-history",
+                "jenis_menu": "Internal",
+                "urutan": 6,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 43,
+                "id_parent": 16,
+                "title": "Log Harga Barang",
+                "url": "log-harga-barang.index",
+                "icon": "fa-file-invoice-dollar",
+                "jenis_menu": "Internal",
+                "urutan": 7,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 44,
+                "id_parent": 16,
+                "title": "Jenis Pekerjaan Project",
+                "url": "master-project.pekerjaan.index",
+                "icon": "fa-list-check",
+                "jenis_menu": "Internal",
+                "urutan": 8,
+                "lihat": 1,
+                "tambah": 1,
+                "edit": 1,
+                "hapus": 1
+            },
+            {
+                "id": 45,
+                "id_parent": 16,
+                "title": "Data Material Pekerjaan",
+                "url": "master-project.material",
+                "icon": "fa-boxes-stacked",
+                "jenis_menu": "Internal",
+                "urutan": 9,
+                "lihat": 1,
+                "tambah": 1,
+                "edit": 1,
+                "hapus": 1
+            },
+            {
+                "id": 46,
+                "id_parent": 16,
+                "title": "Data Jasa Pekerjaan",
+                "url": "master-project.jasa",
+                "icon": "fa-user-gear",
+                "jenis_menu": "Internal",
+                "urutan": 10,
+                "lihat": 1,
+                "tambah": 1,
+                "edit": 1,
+                "hapus": 1
+            },
+            {
+                "id": 47,
+                "id_parent": 0,
+                "title": "Pembayaran Tukang",
+                "url": "pembayaran-tukang.index",
+                "icon": "fa-money-check-alt",
+                "jenis_menu": "Internal",
+                "urutan": 8,
+                "lihat": 1,
+                "tambah": 1,
+                "edit": 1,
+                "hapus": 1
+            },
+            {
+                "id": 48,
+                "id_parent": 0,
+                "title": "Rekap Pengeluaran",
+                "url": "rekap-pengeluaran.index",
+                "icon": "fa-file-invoice-dollar",
+                "jenis_menu": "Internal",
+                "urutan": 9,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 49,
+                "id_parent": 0,
+                "title": "Laporan",
+                "url": "#",
+                "icon": "fa-chart-bar",
+                "jenis_menu": "Internal",
+                "urutan": 9,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 50,
+                "id_parent": 49,
+                "title": "Pengeluaran Barang",
+                "url": "pengeluaran-barang.index",
+                "icon": "fa-sign-out-alt",
+                "jenis_menu": "Internal",
+                "urutan": 1,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 51,
+                "id_parent": 49,
+                "title": "Pemasukan Barang",
+                "url": "pemasukan-barang.index",
+                "icon": "fa-sign-in-alt",
+                "jenis_menu": "Internal",
+                "urutan": 2,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 52,
+                "id_parent": 49,
+                "title": "Pemakaian per Unit",
+                "url": "pemakaian-per-unit.index",
+                "icon": "fa-home",
+                "jenis_menu": "Internal",
+                "urutan": 3,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 53,
+                "id_parent": 49,
+                "title": "Pemakaian per Proyek",
+                "url": "pemakaian-per-proyek.index",
+                "icon": "fa-project-diagram",
+                "jenis_menu": "Internal",
+                "urutan": 4,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 54,
+                "id_parent": 49,
+                "title": "Jasa Harian",
+                "url": "jasa-harian.index",
+                "icon": "fa-user-clock",
+                "jenis_menu": "Internal",
+                "urutan": 5,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 55,
+                "id_parent": 49,
+                "title": "Per Jenis Kerjaan",
+                "url": "sisa-jasa-per-pekerjaan.index",
+                "icon": "fa-tasks",
+                "jenis_menu": "Internal",
+                "urutan": 6,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 56,
+                "id_parent": 49,
+                "title": "Per Proyek",
+                "url": "sisa-jasa-per-proyek.index",
+                "icon": "fa-file-invoice",
+                "jenis_menu": "Internal",
+                "urutan": 7,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 57,
+                "id_parent": 49,
+                "title": "Progres Unit",
+                "url": "progres-unit.index",
+                "icon": "fa-chart-line",
+                "jenis_menu": "Internal",
+                "urutan": 8,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            },
+            {
+                "id": 58,
+                "id_parent": 49,
+                "title": "Rincian Stok Barang",
+                "url": "stok-barang.index",
+                "icon": "fa-boxes",
+                "jenis_menu": "Internal",
+                "urutan": 9,
+                "lihat": 1,
+                "tambah": 0,
+                "edit": 0,
+                "hapus": 0
+            }
+        ]
+    },
+    "mutasi_stok": {
+        "sql": "CREATE TABLE `mutasi_stok` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `tanggal` date DEFAULT NULL,\n  `id_barang_masuk` bigint unsigned DEFAULT NULL,\n  `id_barang_keluar` bigint unsigned DEFAULT NULL,\n  `id_realisasi_bahan` bigint unsigned DEFAULT NULL,\n  `id_barang` bigint unsigned NOT NULL,\n  `jumlah` int NOT NULL DEFAULT '0',\n  `stok_sisa` int NOT NULL DEFAULT '0',\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "pembayaran_jasa": {
+        "sql": "CREATE TABLE `pembayaran_jasa` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `id_setting_proyek` bigint unsigned NOT NULL,\n  `id_master_project_detail` bigint unsigned DEFAULT NULL,\n  `id_jasa_custom` bigint unsigned DEFAULT NULL,\n  `id_tukang` bigint unsigned NOT NULL,\n  `tanggal_pembayaran` date NOT NULL,\n  `jumlah_bayar` bigint unsigned NOT NULL DEFAULT '0',\n  `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,\n  `bukti_bayar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `bukti_bayar_original_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `bukti_bayar_extension` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  PRIMARY KEY (`id`),\n  KEY `pembayaran_jasa_id_setting_proyek_index` (`id_setting_proyek`),\n  KEY `pembayaran_jasa_id_tukang_index` (`id_tukang`),\n  KEY `pembayaran_jasa_id_master_project_detail_index` (`id_master_project_detail`),\n  KEY `pembayaran_jasa_id_jasa_custom_index` (`id_jasa_custom`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "pembayaran_tukang": {
+        "sql": "CREATE TABLE `pembayaran_tukang` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `tanggal` date NOT NULL,\n  `id_tukang` bigint unsigned NOT NULL,\n  `nama_pekerjaan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,\n  `nominal` bigint unsigned NOT NULL DEFAULT '0',\n  `bukti_bayar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `bukti_bayar_original_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `bukti_bayar_extension` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  PRIMARY KEY (`id`),\n  KEY `pembayaran_tukang_tanggal_index` (`tanggal`),\n  KEY `pembayaran_tukang_id_tukang_index` (`id_tukang`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "pengajuan_barang": {
+        "sql": "CREATE TABLE `pengajuan_barang` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `tanggal` date NOT NULL,\n  `id_supplier` bigint unsigned NOT NULL,\n  `total_harga` bigint unsigned NOT NULL DEFAULT '0',\n  `jum_item` int unsigned NOT NULL DEFAULT '0',\n  `status` tinyint unsigned NOT NULL DEFAULT '0',\n  `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "pengajuan_barang_detail": {
+        "sql": "CREATE TABLE `pengajuan_barang_detail` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `id_pengajuan` bigint unsigned NOT NULL,\n  `id_barang` bigint unsigned NOT NULL,\n  `jumlah` int unsigned NOT NULL DEFAULT '0',\n  `harga_beli` bigint unsigned NOT NULL DEFAULT '0',\n  `sub_total` bigint unsigned NOT NULL DEFAULT '0',\n  `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "personal_access_tokens": {
+        "sql": "CREATE TABLE `personal_access_tokens` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `tokenable_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `tokenable_id` bigint unsigned NOT NULL,\n  `name` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `token` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `abilities` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,\n  `last_used_at` timestamp NULL DEFAULT NULL,\n  `expires_at` timestamp NULL DEFAULT NULL,\n  `created_at` timestamp NULL DEFAULT NULL,\n  `updated_at` timestamp NULL DEFAULT NULL,\n  PRIMARY KEY (`id`),\n  UNIQUE KEY `personal_access_tokens_token_unique` (`token`),\n  KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`),\n  KEY `personal_access_tokens_expires_at_index` (`expires_at`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "satuan": {
+        "sql": "CREATE TABLE `satuan` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `nama_satuan` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": [
+            {
+                "id": 1,
+                "nama_satuan": "Pcs"
+            },
+            {
+                "id": 2,
+                "nama_satuan": "Set"
+            },
+            {
+                "id": 13,
+                "nama_satuan": "Unit"
+            },
+            {
+                "id": 14,
+                "nama_satuan": "Sak"
+            },
+            {
+                "id": 15,
+                "nama_satuan": "Kaleng"
+            },
+            {
+                "id": 16,
+                "nama_satuan": "Kilo"
+            },
+            {
+                "id": 17,
+                "nama_satuan": "Truk"
+            },
+            {
+                "id": 18,
+                "nama_satuan": "Pickup"
+            },
+            {
+                "id": 19,
+                "nama_satuan": "Batang"
+            },
+            {
+                "id": 20,
+                "nama_satuan": "Keping"
+            },
+            {
+                "id": 21,
+                "nama_satuan": "ember"
+            },
+            {
+                "id": 22,
+                "nama_satuan": "Dus"
+            },
+            {
+                "id": 23,
+                "nama_satuan": "Kotak"
+            },
+            {
+                "id": 24,
+                "nama_satuan": "Bungkus"
+            },
+            {
+                "id": 25,
+                "nama_satuan": "Roll"
+            },
+            {
+                "id": 26,
+                "nama_satuan": "Gulung"
+            },
+            {
+                "id": 27,
+                "nama_satuan": "Kodi"
+            },
+            {
+                "id": 28,
+                "nama_satuan": "Lembar"
+            }
+        ]
+    },
+    "setting_proyek": {
+        "sql": "CREATE TABLE `setting_proyek` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `id_lokasi` bigint unsigned NOT NULL,\n  `id_kavling` bigint unsigned NOT NULL,\n  `id_master_project` bigint unsigned NOT NULL,\n  `id_tukang` bigint unsigned DEFAULT NULL,\n  `status` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`id`),\n  UNIQUE KEY `setting_proyek_id_kavling_unique` (`id_kavling`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "supplier": {
+        "sql": "CREATE TABLE `supplier` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `kode` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `nama` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `no_telp` varchar(35) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `alamat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `keterangan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `status` int NOT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    },
+    "tukang": {
+        "sql": "CREATE TABLE `tukang` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  `alamat` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,\n  `no_telp` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        "rows": []
+    }
+}
